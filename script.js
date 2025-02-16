@@ -75,7 +75,7 @@ in JS and makes it easier for us to write a secure JS code
 
 //Arrow function -  a shorter form of expression functions
 
-const calcAge3 = birthYear => 2025 - birthYear;
+// const calcAge3 = birthYear => 2025 - birthYear;
 
 
 // Main difference - We can call function declarations before they are defined,
@@ -108,16 +108,100 @@ Function is a simple piece of code that we can reuse over and over again in our 
 // Functions Calling Other Functions
 // Notes -
 */
-function cutFruitPieces (fruit) {
-    return fruit * 4
+// function cutFruitPieces (fruit) {
+//     return fruit * 4
 
+// }
+
+// // function fruitProcessor (apple,orange){
+// //     const applePieces = cutFruitPieces (apple)
+// //     const orangePieces = cutFruitPieces (orange)
+// //     const juice = 'Juice with $(applePieces) pieces of apple and $(orangePieces) pieces of orange'
+// //     return juice;
+// // }
+// // console.log(fruitProcessor(3,6))
+// //.
+
+
+
+
+
+// // 16/02/2025
+
+// //Arrays - Data structure
+
+// // const friend1 = 'Kingsley'
+// // const friend2 = 'Avalon'
+// // const friend3 = 'Adrian'
+
+// // const friends = friend1 + ', ' + friend2 + ', '+ friend3
+// // console.log friends
+// const friends = ['Kingsley', 'Avalon', 'Adrian']
+// // console.log(friends)
+// // // console.log(friends[0])
+// // // console.log(friends[1])
+// // // console.log(friends[2])
+// // // //Array is zero based. (Starts on zero)
+// // // console.log (friends.length)
+// // //Get the number of elements of the array.
+// // //Get the last element of the array.
+// // console.log(friends[friends.length-1])
+// // friends[2] = 'Massa'
+
+// //We can't change the whole array, only the elements inside.
+
+// //add an element at the end of an array.
+// const newFriends = friends.push ('Massa')
+// console.log (friends)
+// //Adding an element at the start of the array:
+// friends.unshift('Lucas')
+// console.log(friends)
+
+// //Removing an element at the end of array:
+// friends.pop()
+// console.log (friends)
+
+// //Removing an element at the beginning of array:
+ 
+// friends.shift()
+// console.log(friends)
+
+// //Telling the position in the array:
+// console.log(friends.indexOf ('Kingsley'))
+// console.log(friends.indexOf('Lucas')) //Not in array, so returns -1.
+
+// // Includes - it will return a true or false value to check if the element is in the array or not.
+
+// console.log (friends.includes('Lucas'))
+// console.log (friends.includes('Kingsley'))
+// console.log (friends.includes('Avalon'))
+// console.log (friends.includes('Massa'))
+
+// if (friends.includes('Kingsley')) {
+//     console.log ('You have a friend called Kingsley.')
+// }
+
+
+
+// OBJECTS - Another data structure
+
+const lucas = {
+    firstName: 'Lucas',
+    lastName: 'Yeh',
+    age: 2025-2010,
+    job: 'Student',
+    friends: ['Kingsley','Avalon','Adrian']
 }
 
-function fruitProcessor (apple,orange){
-    const applePieces = cutFruitPieces (apple)
-    const orangePieces = cutFruitPieces (orange)
-    const juice = 'Juice with $(applePieces) pieces of apple and $(orangePieces) pieces of orange'
-    return juice;
-}
-console.log(fruitProcessor(3,6))
-//.
+// console.log (lucas)
+
+// const nameKey = 'Name'
+// console.log (lucas ['first' + nameKey])
+
+// const interestedIn = prompt('What do you want to know about Lucas? Choose between firstname, last name, jobs and friends.')
+
+// console.log (lucas.interestedIn) //Doesnt work, as interestedIn isnt in the object key.
+// UNDEFINED
+// console.log (lucas[interestedIn])
+
+console.log (lucas.firstName + ' has ' + lucas.friends.length + ' friends, and his best friend is ' + lucas.friends[0])
